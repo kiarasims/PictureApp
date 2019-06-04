@@ -11,9 +11,8 @@ public class Picture {
 
     @Override
     public String toString() {
-        return "Picture{" +
-                "name='" + name + '\'' +
-                ", size=" + size +
-                '}';
+        return name + '-' +
+                + size + "MB";
+                }
     }
-}
+
