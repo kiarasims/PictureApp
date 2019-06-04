@@ -8,4 +8,12 @@ public class Picture {
         this.name = "Kiara";
         this.size = 3.14;
     }
+
+    @Override
+    public String toString() {
+        return "Picture{" +
+                "name='" + name + '\'' +
+                ", size=" + size +
+                '}';
+    }
 }
