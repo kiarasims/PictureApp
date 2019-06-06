@@ -14,5 +14,11 @@ public class Picture {
         return name + '-' +
                 + size + "MB";
                 }
+
+    public Picture(String newName, double newSize ){
+        name = newName;
+        size = newSize;
     }
+}
+
 
