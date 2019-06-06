@@ -11,6 +11,10 @@ public class Main {
 	System.out.println("The object name is " + name1);
     pic.setName("Luna");
     System.out.println("The updated object is " + pic);
+    double size1 = kiara.getSize();
+    System.out.println("The object size is " + size1);
+    kiara.setSize(5.23);
+    System.out.println("The updated object is " + kiara);
     }
 
 }
