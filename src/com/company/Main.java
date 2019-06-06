@@ -15,6 +15,8 @@ public class Main {
     System.out.println("The object size is " + size1);
     kiara.setSize(5.23);
     System.out.println("The updated object is " + kiara);
+    double doubleSize = size1 * 2;
+    System.out.println(doubleSize + " is the object size doubled.");
     }
 
 }
