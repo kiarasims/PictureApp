@@ -7,6 +7,9 @@ public class Main {
 	Picture kiara = new Picture();
 	System.out.println("Kiara is " + kiara);
 	Picture pic = new Picture("Lang", 1.2);
+	String name1  = pic.getName();
+	System.out.println("The object name is " + name1);
+
     }
 
 }
