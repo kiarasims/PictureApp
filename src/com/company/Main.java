@@ -6,6 +6,7 @@ public class Main {
 	System.out.println("Welcome to Kiara's Picture App.");
 	Picture kiara = new Picture();
 	System.out.println("Kiara is " + kiara);
+	Picture pic = new Picture("Lang", 1.2);
     }
 
 }
