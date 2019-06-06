@@ -9,7 +9,8 @@ public class Main {
 	Picture pic = new Picture("Lang", 1.2);
 	String name1  = pic.getName();
 	System.out.println("The object name is " + name1);
-
+    pic.setName("Luna");
+    System.out.println("The updated object is " + pic);
     }
 
 }
