@@ -30,6 +30,12 @@ public class Main {
     kiara.setName(objectName2);
     pic.setName(objectName);
     System.out.println(kiara + " and " + pic);
+
+    double objectSize2 = kiara.getSize();
+    double objectSize3 = pic.getSize();
+    double average = (objectSize2 + objectSize3) / 2;
+    pic.setSize(average);
+    System.out.println("The average size of the two objects are the size of one object: " + pic);
     }
 
 }
