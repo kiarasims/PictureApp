@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Random;
+
 public class Picture {
     private String name;
     private double size;
@@ -41,6 +43,12 @@ public class Picture {
 
     public void numCharsInName(String newName){
         newName.length();
+    }
+
+    public void generateRandomPicture(){
+        Random random = new Random();
+        double value = random.nextDouble();
+        String name = "";
     }
 }
 
