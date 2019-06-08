@@ -38,6 +38,10 @@ public class Picture {
 
 
     }
+
+    public void numCharsInName(String newName){
+        newName.length();
+    }
 }
 
 
