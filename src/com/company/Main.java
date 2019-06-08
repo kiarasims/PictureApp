@@ -21,8 +21,7 @@ public class Main {
     kiara.setSize(5.23);
     System.out.println("The updated object is " + kiara);
 
-    double objectSize = pic.getSize();
-    double doubleSize = objectSize * 2;
+    double doubleSize = kiara.getSize() * 2;
     System.out.println(doubleSize + " is the object size doubled.");
 
     String objectName = kiara.getName();
@@ -31,9 +30,7 @@ public class Main {
     pic.setName(objectName);
     System.out.println(kiara + " and " + pic);
 
-    double objectSize2 = kiara.getSize();
-    double objectSize3 = pic.getSize();
-    double average = (objectSize2 + objectSize3) / 2;
+    double average = (kiara.getSize() + pic.getSize()) / 2;
     pic.setSize(average);
     System.out.println("The average size of the two objects are the size of one object: " + pic);
     }
