@@ -43,6 +43,12 @@ public class Main {
     String[] names = new String[]{"Kendra", "Renee'", "Tyrick", "Dimond", "Rita"};
     System.out.println("The list of names: " + Arrays.toString(names));
 
+    int middle = ((1 + names.length) / 2) - 1;
+    String temp = names[0];
+    names[0] = names[middle];
+    names[middle] = temp;
+    System.out.println(Arrays.toString(names));
+
     }
 
 }
