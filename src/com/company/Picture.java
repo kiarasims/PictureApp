@@ -47,8 +47,8 @@ public class Picture {
 
     public void generateRandomPicture(){
         Random random = new Random();
-        double value = random.nextDouble();
-        String name = "";
+        size = random.nextDouble();
+        name = " ";
     }
 }
 
