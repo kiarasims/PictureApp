@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -37,6 +39,9 @@ public class Main {
     Picture dog = new Picture();
     dog.generateRandomPicture();
     System.out.println("The new object is " + dog);
+
+    String[] names = new String[]{"Kendra", "Renee'", "Tyrick", "Dimond", "Rita"};
+    System.out.println("The list of names: " + Arrays.toString(names));
 
     }
 
