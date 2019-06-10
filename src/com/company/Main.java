@@ -33,6 +33,11 @@ public class Main {
     double average = (kiara.getSize() + pic.getSize()) / 2;
     pic.setSize(average);
     System.out.println("The average size of the two objects are the size of one object: " + pic);
+
+    Picture dog = new Picture();
+    dog.generateRandomPicture();
+    System.out.println("The new object is " + dog);
+
     }
 
 }
