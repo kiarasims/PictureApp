@@ -55,7 +55,20 @@ public class Main {
                 maxLength = names[e];
             }
         }
-        System.out.println(maxLength);
+        System.out.println("The longest name is " + maxLength);
+
+        Picture ranObject = new Picture();
+        ranObject.generateRandomPicture();
+        System.out.println("The first random object: " + ranObject);
+
+        Picture ranObject1 = new Picture();
+        ranObject1.generateRandomPicture();
+        System.out.println("The second random object: " + ranObject1);
+
+        Picture ranObject2 = new Picture();
+        ranObject2.generateRandomPicture();
+        System.out.println("The third random object: " + ranObject2);
+
 
     }
 }
