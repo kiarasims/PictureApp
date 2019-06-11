@@ -46,9 +46,12 @@ public class Picture {
     }
 
     public void generateRandomPicture(){
+        String [] newNames = {"Janice", "Cameron", "Cartez", "Derrick", "Ryan"};
         Random random = new Random();
         size = random.nextDouble();
-        name = " ";
+        Random rand = new Random();
+        int index = rand.nextInt(newNames.length);
+        name = newNames[index];
     }
 }
 
