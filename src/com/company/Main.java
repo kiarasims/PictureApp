@@ -69,6 +69,14 @@ public class Main {
         ranObject2.generateRandomPicture();
         System.out.println("The third random object: " + ranObject2);
 
+        Picture [] pictures = new Picture[100];
+        for(int index = 0; index < pictures.length; index++){
+            Picture pict = new Picture();
+            pict.generateRandomPicture();
+            pictures[index] = pict;
+        }
+        System.out.println(Arrays.toString(pictures));
+
 
     }
 }
