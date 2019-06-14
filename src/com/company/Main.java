@@ -10,12 +10,12 @@ public class Main {
         Picture kiara = new Picture();
         System.out.println("Kiara is " + kiara);
 
-        Picture pic = new Picture("Lang", 1.2);
-        String name1 = pic.getName();
+        Picture nPict = new Picture("Lang", 1.2);
+        String name1 = nPict.getName();
         System.out.println("The object name is " + name1);
 
-        pic.setName("Luna");
-        System.out.println("The updated object is " + pic);
+        nPict.setName("Luna");
+        System.out.println("The updated object is " + nPict);
 
         double size1 = kiara.getSize();
         System.out.println("The object size is " + size1);
@@ -27,14 +27,14 @@ public class Main {
         System.out.println(doubleSize + " is the object size doubled.");
 
         String objectName = kiara.getName();
-        String objectName2 = pic.getName();
+        String objectName2 = nPict.getName();
         kiara.setName(objectName2);
-        pic.setName(objectName);
-        System.out.println(kiara + " and " + pic);
+        nPict.setName(objectName);
+        System.out.println(kiara + " and " + nPict);
 
-        double average = (kiara.getSize() + pic.getSize()) / 2;
-        pic.setSize(average);
-        System.out.println("The average size of the two objects are the size of one object: " + pic);
+        double average = (kiara.getSize() + nPict.getSize()) / 2;
+        nPict.setSize(average);
+        System.out.println("The average size of the two objects are the size of one object: " + nPict);
 
         Picture dog = new Picture();
         dog.generateRandomPicture();
@@ -78,5 +78,26 @@ public class Main {
         System.out.println(Arrays.toString(pictures));
 
 
+        System.out.println("\nThe ranObject is " + ranObject);
+        ranObject = multipleSize(ranObject, 100);
+        System.out.println("ranObject *100 size is " + ranObject);
+
+        Picture[] numObjects = nArrays(100);
+        System.out.println(Arrays.toString(numObjects));
+
+    }
+    public static Picture multipleSize(Picture pict, int factor) {
+        pict.setSize(pict.getSize()*factor);
+        return pict;
+    }
+
+    public static Picture[] nArrays( int num){
+        Picture[] picts = new Picture[num];
+        for(int index = 0; index < picts.length; index++){
+            Picture pic = new Picture();
+            pic.generateRandomPicture();
+            picts[index] = pic;
+        }
+        return picts;
     }
 }
