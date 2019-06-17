@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
 
@@ -82,8 +83,12 @@ public class Main {
         ranObject = multipleSize(ranObject, 100);
         System.out.println("ranObject *100 size is " + ranObject);
 
-        Picture[] numObjects = nArrays(100);
+        Picture[] numObjects = nArrays(10);
         System.out.println(Arrays.toString(numObjects));
+        
+        String [] listName = {"Tom", "Dan", "Lucus", "Peyton"};
+        Picture [] ranNObjects = ranNArrays(12, listName);
+        System.out.println(Arrays.toString(ranNObjects));
 
     }
     public static Picture multipleSize(Picture pict, int factor) {
@@ -99,5 +104,19 @@ public class Main {
             picts[index] = pic;
         }
         return picts;
+    }
+
+    public static Picture[] ranNArrays(int num, String [] names){
+        Random rand = new Random();
+        Picture[] ranPics = new Picture[num];
+        for(int index = 0; index < ranPics.length; index++){
+            int ind = rand.nextInt(names.length);
+            String name = names[ind];
+            Double size = rand.nextDouble();
+            Picture ranPic = new Picture(name, size);
+            ranPics[index] = ranPic;
+
+        }
+        return  ranPics;
     }
 }
