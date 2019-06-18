@@ -86,9 +86,13 @@ public class Main {
         Picture[] numObjects = nArrays(10);
         System.out.println(Arrays.toString(numObjects));
         
-        String [] listName = {"Tom", "Dan", "Lucus", "Peyton"};
+        String [] listName = {"Tom", "Dan", "Lucus", "Peyton", "Tom"};
         Picture [] ranNObjects = ranNArrays(12, listName);
         System.out.println(Arrays.toString(ranNObjects));
+
+        String [] listNames = {"Tom", "Carly", "Tom"};
+        int number = countName("Tom", listNames);
+        System.out.println("The number of Tom's are " + number);
 
     }
     public static Picture multipleSize(Picture pict, int factor) {
@@ -118,5 +122,14 @@ public class Main {
 
         }
         return  ranPics;
+    }
+
+    public static int countName(String name, String [] names){
+        int count = 0;
+        for(int index = 0; index < names.length; index++ ){
+            if(name == names[index]){
+            count = count + 1;}
+        }
+        return count;
     }
 }
