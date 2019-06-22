@@ -89,9 +89,8 @@ public class Main {
         String [] listName = {"Tom", "Dan", "Lucus", "Peyton", "Tom"};
         Picture [] ranNObjects = ranNArrays(12, listName);
         System.out.println(Arrays.toString(ranNObjects));
-
-        String [] listNames = {"Tom", "Carly", "Tom"};
-        int number = countName("Tom", listNames);
+        
+        int number = countName("Tom", ranNObjects);
         System.out.println("The number of Tom's are " + number);
 
     }
@@ -124,12 +123,15 @@ public class Main {
         return  ranPics;
     }
 
-    public static int countName(String name, String [] names){
+    public static int countName(String name, Picture [] picts){
         int count = 0;
-        for(int index = 0; index < names.length; index++ ){
-            if(name == names[index]){
-            count = count + 1;}
+        for(int index = 0; index < picts.length; index++ ){
+            if(name == picts[index].getName()){ count = count + 1;}
         }
         return count;
     }
+
+   // public static int countNames(String [] names, Arrays [] pict){
+
+    //}
 }
