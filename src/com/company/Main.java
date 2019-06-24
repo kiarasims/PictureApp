@@ -103,6 +103,9 @@ public class Main {
         String minSizename = minSize(numObjects);
         System.out.println("The object with the min size is " + minSizename);
 
+        Picture [] newPict = swapObjects(ranNObjects, 3, 9);
+        System.out.println(Arrays.toString(newPict));
+
     }
     public static Picture multipleSize(Picture pict, int factor) {
         pict.setSize(pict.getSize()*factor);
@@ -176,4 +179,10 @@ public class Main {
         return pictName;
     }
 
+    public static Picture [] swapObjects(Picture [] pict, int num1, int num2){
+        Picture temp = pict[num1];
+        pict[num1] = pict[num2];
+        pict[num2] = temp;
+        return pict;
+    }
 }
