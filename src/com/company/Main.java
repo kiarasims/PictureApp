@@ -97,6 +97,9 @@ public class Main {
         int numNames = countNames(nameList, numObjects);
         System.out.println("There are " + numNames + " number of objects with the names in the list.");
 
+        String maxSizename = maxSize(numObjects);
+        System.out.println("The object with the max size is " + maxSizename);
+
     }
     public static Picture multipleSize(Picture pict, int factor) {
         pict.setSize(pict.getSize()*factor);
@@ -145,4 +148,17 @@ public class Main {
         }
         return count;
     }
+
+   public static String maxSize(Picture [] pict) {
+       double big = pict[0].getSize();
+       String pictName = pict[0].getName();
+       for (int index = 0; index < pict.length; index++) {
+           if (big < pict[index].getSize()) {
+               big = pict[index].getSize();
+               pictName = pict[index].getName();
+           }
+       }
+       return pictName;
+   }
+
 }
