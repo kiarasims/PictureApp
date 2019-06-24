@@ -100,6 +100,9 @@ public class Main {
         String maxSizename = maxSize(numObjects);
         System.out.println("The object with the max size is " + maxSizename);
 
+        String minSizename = minSize(numObjects);
+        System.out.println("The object with the min size is " + minSizename);
+
     }
     public static Picture multipleSize(Picture pict, int factor) {
         pict.setSize(pict.getSize()*factor);
@@ -160,5 +163,17 @@ public class Main {
        }
        return pictName;
    }
+
+    public static String minSize(Picture [] pict) {
+        double small = pict[0].getSize();
+        String pictName = pict[0].getName();
+        for (int index = 0; index < pict.length; index++) {
+            if (small > pict[index].getSize()) {
+                small = pict[index].getSize();
+                pictName = pict[index].getName();
+            }
+        }
+        return pictName;
+    }
 
 }
