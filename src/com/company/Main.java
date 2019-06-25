@@ -85,7 +85,7 @@ public class Main {
 
         Picture[] numObjects = nArrays(10);
         System.out.println(Arrays.toString(numObjects));
-        
+
         String [] listName = {"Tom", "Dan", "Lucus", "Peyton", "Tom"};
         Picture [] ranNObjects = ranNArrays(12, listName);
         System.out.println(Arrays.toString(ranNObjects));
@@ -100,11 +100,12 @@ public class Main {
         String maxSizename = maxSize(numObjects);
         System.out.println("The object with the max size is " + maxSizename);
 
-        String minSizename = minSize(numObjects);
-        System.out.println("The object with the min size is " + minSizename);
+        int minSizeindex = minSize(numObjects);
+        System.out.println("The object with the min size index is " + minSizeindex);
 
-        Picture [] newPict = swapObjects(ranNObjects, 3, 9);
-        System.out.println(Arrays.toString(newPict));
+        swapObjects(numObjects, 4, 9);
+        System.out.println(Arrays.toString(numObjects));
+
 
     }
     public static Picture multipleSize(Picture pict, int factor) {
@@ -167,22 +168,22 @@ public class Main {
        return pictName;
    }
 
-    public static String minSize(Picture [] pict) {
+    public static int minSize(Picture [] pict) {
         double small = pict[0].getSize();
-        String pictName = pict[0].getName();
+        int smallIndex = 0;
+        //String pictName = pict[0].getName();
         for (int index = 0; index < pict.length; index++) {
-            if (small > pict[index].getSize()) {
-                small = pict[index].getSize();
-                pictName = pict[index].getName();
+            if (small < pict[index].getSize()) {
+                smallIndex = index;
+                //pictName = pict[index].getName();
             }
         }
-        return pictName;
+        return smallIndex;
     }
 
-    public static Picture [] swapObjects(Picture [] pict, int num1, int num2){
+    public static void swapObjects(Picture [] pict, int num1, int num2){
         Picture temp = pict[num1];
         pict[num1] = pict[num2];
         pict[num2] = temp;
-        return pict;
     }
 }
