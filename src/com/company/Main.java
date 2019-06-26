@@ -171,11 +171,10 @@ public class Main {
     public static int minSize(Picture [] pict) {
         double small = pict[0].getSize();
         int smallIndex = 0;
-        //String pictName = pict[0].getName();
         for (int index = 0; index < pict.length; index++) {
-            if (small < pict[index].getSize()) {
+            if (small > pict[index].getSize()) {
                 smallIndex = index;
-                //pictName = pict[index].getName();
+                small = pict[index].getSize();
             }
         }
         return smallIndex;
