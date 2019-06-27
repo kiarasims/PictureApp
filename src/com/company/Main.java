@@ -106,6 +106,11 @@ public class Main {
         swapObjects(numObjects, 4, 9);
         System.out.println(Arrays.toString(numObjects));
 
+        Arrays.sort(ranNObjects, new SortPictureBySize());
+        System.out.println("\nSorted by size ");
+        for (int index = 0; index < ranNObjects.length; index++)
+            System.out.println(ranNObjects[index]);
+
 
     }
     public static Picture multipleSize(Picture pict, int factor) {
