@@ -112,6 +112,11 @@ public class Main {
             System.out.println(ranNObjects[index]);
 
 
+        Arrays.sort(ranNObjects, new SortPictureByName());
+        System.out.println("\nSorted by name ");
+        for (int i = 0; i < ranNObjects.length; i++)
+            System.out.println(ranNObjects[i]);
+
     }
     public static Picture multipleSize(Picture pict, int factor) {
         pict.setSize(pict.getSize()*factor);
